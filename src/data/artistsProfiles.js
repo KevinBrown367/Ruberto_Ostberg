@@ -1,8 +1,11 @@
+import ANNA_OSTBERG_IMG from "./images/artist_photos/Anna_Ostberg.jpg";
+import SAM_ROBERTS_IMG from "./images/artist_photos/Sam_Roberts.jpg";
+
 const ARTISTSPROFILE = [
   {
     id: 1,
     name: "Anna Ostberg",
-    image: "",
+    image: ANNA_OSTBERG_IMG,
     description: "",
     website: "",
     facebook: "https://www.facebook.com/RubertoOstberg",
@@ -12,7 +15,7 @@ const ARTISTSPROFILE = [
   {
     id: 2,
     name: "Cam Roberts",
-    image: "",
+    image: SAM_ROBERTS_IMG,
     description: "",
     website: "",
     facebook: "",
