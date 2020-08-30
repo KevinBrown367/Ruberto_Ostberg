@@ -7,6 +7,8 @@
   width: 35px;
   padding: 5px;
   filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
 }
 
 .enabledSocialMedia {

@@ -20,7 +20,11 @@ class Artist extends Component {
     } = this.props.artistProfile;
 
     let facebookLink = (
-      <a href={facebook} target="_blank" rel="noopener noreferrer">
+      <a
+        href={facebook === "" ? null : facebook}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           alt="facebook_logo"
           src={FACEBOOK_LOGO}
@@ -31,8 +35,37 @@ class Artist extends Component {
       </a>
     );
 
-    let instagramLink = <div>Test</div>;
-    let twitterLink = <div>Test</div>;
+    let instagramLink = (
+      <a
+        href={instagram === "" ? null : instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          alt="instagram_logo"
+          src={INSTAGRAM_LOGO}
+          className={
+            instagram === "" ? "disabledSocialMedia" : "enabledSocialMedia"
+          }
+        ></img>
+      </a>
+    );
+
+    let twitterLink = (
+      <a
+        href={twitter === "" ? null : twitter}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          alt="instagram_logo"
+          src={TWITTER_LOGO}
+          className={
+            twitter === "" ? "disabledSocialMedia" : "enabledSocialMedia"
+          }
+        ></img>
+      </a>
+    );
 
     return (
       <div>
@@ -43,21 +76,8 @@ class Artist extends Component {
           style={{ width: 200, height: 200, borderRadius: 100 }}
         />
         {facebookLink}
-
-        <a href={instagram} target="_blank" rel="noopener noreferrer">
-          <img
-            alt="instagram_logo"
-            src={INSTAGRAM_LOGO}
-            className="socialMediaImg"
-          ></img>
-        </a>
-        <a href={twitter} target="_blank" rel="noopener noreferrer">
-          <img
-            alt="twitter_logo"
-            src={TWITTER_LOGO}
-            className="socialMediaImg"
-          ></img>
-        </a>
+        {instagramLink}
+        {twitterLink}
       </div>
     );
   }
